@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.FactoryMethod", "DesignPatterns.FactoryMethod\DesignPatterns.FactoryMethod.csproj", "{D1840EC5-8921-4163-B0F9-B970F7660A08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.AbstractFactory", "DesignPatterns.AbstractFactory\DesignPatterns.AbstractFactory.csproj", "{231879E8-F4B5-4D8E-B307-F76814E69E3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creator", "Creator", "{A0898BE5-61CC-40E1-AE05-43CDD84265EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,17 @@ Global
 		{D1840EC5-8921-4163-B0F9-B970F7660A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1840EC5-8921-4163-B0F9-B970F7660A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1840EC5-8921-4163-B0F9-B970F7660A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231879E8-F4B5-4D8E-B307-F76814E69E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231879E8-F4B5-4D8E-B307-F76814E69E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231879E8-F4B5-4D8E-B307-F76814E69E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231879E8-F4B5-4D8E-B307-F76814E69E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1840EC5-8921-4163-B0F9-B970F7660A08} = {A0898BE5-61CC-40E1-AE05-43CDD84265EC}
+		{231879E8-F4B5-4D8E-B307-F76814E69E3D} = {A0898BE5-61CC-40E1-AE05-43CDD84265EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97D4CD81-1B12-41EE-9D31-C7524C2ABF9D}
