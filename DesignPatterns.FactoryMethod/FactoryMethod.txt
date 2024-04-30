@@ -1,0 +1,65 @@
+﻿-----> Factory Method <------
+
+
+O padrão de projeto Factory Method é um padrão criacional que define uma interface para criar um objeto, 
+]mas deixa que as classes derivadas decidam qual classe instanciar. Esse padrão permite que uma classe adie 
+a instanciação para subclasses, promovendo o desacoplamento entre o criador e as classes concretas.
+
+FUNCIONAMENTO:
+
+O Factory Method é geralmente implementado usando uma interface ou uma classe abstrata. Em um nível alto, 
+ele funciona assim:
+
+1. Interface de Produto: Define a interface dos objetos que o método fábrica irá criar.
+2. Concretas de Produto: São as implementações diferentes da interface do produto.
+3. Criador: É uma classe que declara o método fábrica, que retorna um objeto do tipo produto. Este método pode ser abstrato, ou pode ter uma implementação padrão.
+4. Criadores Concretos: São subclasses que sobrescrevem o método fábrica para criar instâncias de produtos concretos.
+
+USO DE CLASSES ABSTRATAS OU INTERFACES:
+
+O Factory Method pode ser implementado tanto com classes abstratas quanto com interfaces. 
+A escolha depende do nível de abstração e flexibilidade desejado:
+
+1. Classes Abstratas: São usadas quando você tem uma base de implementação que deseja compartilhar entre várias 
+subclasses. As classes abstratas permitem que você defina comportamento padrão e delegue a criação de objetos para 
+subclasses que fornecem implementações concretas.
+2. Interfaces: São usadas quando você quer apenas definir um contrato para o método fábrica, sem impor uma implementação 
+padrão. Isso proporciona maior flexibilidade, pois permite que as implementações do método fábrica sejam completamente 
+independentes.
+
+VANTAGENS:
+
+1. Flexibilidade e Extensibilidade: Permite adicionar novos tipos de produtos sem perturbar o código cliente existente, o que facilita a manutenção e a expansão do sistema.
+2. Desacoplamento: O código cliente opera através de interfaces comuns, o que reduz a dependência entre as classes específicas. Isso significa que as alterações em uma parte específica do código não afetam outras partes.
+3. Reutilização de Código: O código comum para a criação de objetos pode ser centralizado em um criador, reduzindo a duplicação e promovendo a reutilização.
+4. Princípio de Responsabilidade Única: O padrão permite que você separe o código de construção do produto do código que usa o produto, mantendo a classe focada em uma única responsabilidade.
+5. Princípio de Substituição de Liskov: As classes derivadas podem ser substituídas por suas classes base sem afetar o funcionamento do sistema, o que é uma boa prática de programação orientada a objetos.
+
+DESVANTAGENS:
+1. Complexidade Adicional: Introduz mais classes e interfaces no sistema, o que pode complicar o design, especialmente em projetos onde tal flexibilidade não é necessária.
+2. Criação Indireta de Objetos: Como a criação de objetos é feita através de um método indireto, pode ser mais difícil compreender e depurar o código, particularmente para quem não está familiarizado com o padrão.
+3. Refatoração Necessária: Se o número de produtos ou variantes cresce significativamente, pode ser necessário refatorar o código para acomodar novas classes, o que pode ser trabalhoso.
+
+PERFORMANCE:
+
+Em termos de performance, o impacto do Factory Method geralmente é muito pequeno:
+
+1. Overhead de Tempo de Execução: Há um pequeno overhead devido ao chamado de método adicional quando objetos são criados via Factory Method, mas isso é geralmente insignificante em aplicações reais.
+2. Custo de Memória: Similarmente, o uso de um Factory Method pode exigir um pouco mais de memória devido ao armazenamento das classes Factory adicionais, mas o impacto também é geralmente mínimo.
+
+EXEMPLO UTILIZADO:
+
+No exemplo deste projeto, segui o seguinte critério:
+1. Utilizar classe abstrata para os tipos de tela (uma vez que era necessário persistir as propriedades para evitar repetição de código);
+2. Utilizar interface para o Factory Method (uma vez que não era necessário compartilhar código entre as classes concretas);
+
+QUANDO UTILIZAR:
+
+O Factory Method é um padrão de projeto muito útil em situações em que você precisa criar objetos de diferentes tipos, mas não deseja que o código cliente dependa de classes concretas. 
+Alguns cenários comuns em que o Factory Method é útil incluem:
+
+1. Quando você precisa encapsular a lógica de criação de objetos: O padrão Factory Method encapsula a lógica de criação de objetos em uma classe separada, o que torna o código mais organizado e fácil de manter.
+2. Quando você precisa desacoplar o código do cliente da criação de objetos: O uso do padrão Factory Method permite que o código do cliente trabalhe com uma interface comum para criar objetos, em vez de lidar diretamente com as classes concretas.
+3. Quando você precisa suportar a adição de novos tipos de objetos sem modificar o código existente: O padrão Factory Method permite adicionar novos tipos de objetos (novas subclasses) sem modificar o código do cliente, pois o cliente interage com a interface, não com as implementações concretas.
+4. Quando a criação de objetos envolve lógica complexa ou condicional: Se a criação de objetos envolve lógica condicional complexa, como base em parâmetros de entrada ou configuração do sistema, o Factory Method pode simplificar a lógica de criação, movendo-a para classes de fábrica dedicadas.
+5. Quando você deseja permitir que subclasses alterem o processo de criação de objetos: O Factory Method permite que subclasses substituam o método de fábrica para criar objetos diferentes, fornecendo assim flexibilidade para estender ou personalizar o processo de criação.
