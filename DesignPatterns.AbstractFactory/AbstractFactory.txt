@@ -1,1 +1,111 @@
-﻿
+﻿-----> Abstract Factory <------
+
+O padrão de projeto Abstract Factory é um padrão criacional que fornece uma interface para criar famílias de objetos relacionados ou 
+dependentes sem especificar suas classes concretas. Esse padrão ajuda a garantir que um sistema seja independente 
+de como seus produtos são criados, compostos e representados.
+
+FUNCIONAMENTO:
+
+O Abstract Factory é implementado através de interfaces e classes abstratas. Funciona da seguinte maneira:
+
+1. Interface de Fábrica Abstrata: Define uma interface para criar famílias de produtos relacionados.
+2. Fábricas Concretas: Implementam a interface da fábrica abstrata e criam produtos que são internamente coerentes.
+3. Interface de Produto: Define a interface dos produtos que as fábricas criarão.
+4. Produtos Concretos: São as implementações específicas dos produtos que são criados pelas fábricas concretas.
+
+
+Aqui está um resumo detalhado sobre o padrão de projeto Abstract Factory usando a mesma estrutura que você usou para o Factory Method:
+
+-----> Abstract Factory <------
+
+O padrão de projeto Abstract Factory é um padrão criacional que fornece uma interface para criar famílias de objetos relacionados ou dependentes 
+sem especificar suas classes concretas. Esse padrão ajuda a garantir que um sistema seja independente de como seus produtos são criados, compostos e representados.
+
+FUNCIONAMENTO:
+
+O Abstract Factory é implementado através de interfaces e classes abstratas. Funciona da seguinte maneira:
+
+1. Interface de Fábrica Abstrata: Define uma interface para criar famílias de produtos relacionados.
+2. Fábricas Concretas: Implementam a interface da fábrica abstrata e criam produtos que são internamente coerentes.
+3. Interface de Produto: Define a interface dos produtos que as fábricas criarão.
+4. Produtos Concretos: São as implementações específicas dos produtos que são criados pelas fábricas concretas.
+
+USO DE CLASSES ABSTRATAS OU INTERFACES:
+
+O Abstract Factory pode utilizar tanto classes abstratas quanto interfaces, dependendo da necessidade de compartilhar código ou apenas especificar um contrato:
+
+1. Classes Abstratas: Utilizadas para compartilhar código que implementa a interface da fábrica, facilitando a criação de famílias de produtos que têm implementações semelhantes.
+2. Interfaces: Usadas para definir um contrato que todas as fábricas concretas devem seguir, permitindo que diferentes fábricas implementem a criação de produtos de maneiras distintas.
+
+VANTAGENS:
+
+1. Consistência entre Produtos: Garante que produtos de uma mesma família sejam usados juntos, o que é importante para a compatibilidade.
+2. Isolamento das Classes Concretas: O cliente não precisa conhecer as classes que implementam produtos; ele apenas trabalha com produtos através de suas interfaces.
+3. Facilidade de Troca de Família de Produtos: É fácil substituir uma família de produtos por outra como um grupo.
+4. Princípio de Segregação de Interface: Promove o uso de interfaces específicas para cada tipo de produto.
+5. Fomenta a Coesão: Reforça a coesão dentro de uma família de produtos.
+
+
+Aqui está um resumo detalhado sobre o padrão de projeto Abstract Factory usando a mesma estrutura que você usou para o Factory Method:
+
+-----> Abstract Factory <------
+
+O padrão de projeto Abstract Factory é um padrão criacional que fornece uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas. Esse padrão ajuda a garantir que um sistema seja independente de como seus produtos são criados, compostos e representados.
+
+FUNCIONAMENTO:
+
+O Abstract Factory é implementado através de interfaces e classes abstratas. Funciona da seguinte maneira:
+
+Interface de Fábrica Abstrata: Define uma interface para criar famílias de produtos relacionados.
+Fábricas Concretas: Implementam a interface da fábrica abstrata e criam produtos que são internamente coerentes.
+Interface de Produto: Define a interface dos produtos que as fábricas criarão.
+Produtos Concretos: São as implementações específicas dos produtos que são criados pelas fábricas concretas.
+USO DE CLASSES ABSTRATAS OU INTERFACES:
+
+O Abstract Factory pode utilizar tanto classes abstratas quanto interfaces, dependendo da necessidade de compartilhar código ou apenas especificar um contrato:
+
+Classes Abstratas: Utilizadas para compartilhar código que implementa a interface da fábrica, facilitando a criação de famílias de produtos que têm implementações semelhantes.
+Interfaces: Usadas para definir um contrato que todas as fábricas concretas devem seguir, permitindo que diferentes fábricas implementem a criação de produtos de maneiras distintas.
+VANTAGENS:
+
+Consistência entre Produtos: Garante que produtos de uma mesma família sejam usados juntos, o que é importante para a compatibilidade.
+Isolamento das Classes Concretas: O cliente não precisa conhecer as classes que implementam produtos; ele apenas trabalha com produtos através de suas interfaces.
+Facilidade de Troca de Família de Produtos: É fácil substituir uma família de produtos por outra como um grupo.
+Princípio de Segregação de Interface: Promove o uso de interfaces específicas para cada tipo de produto.
+Fomenta a Coesão: Reforça a coesão dentro de uma família de produtos.
+
+DESVANTAGENS:
+
+1. Difícil de Adicionar Novos Produtos: Adicionar novos produtos às famílias existentes pode exigir mudanças na interface da fábrica abstrata e todas as suas derivadas, o que pode ser dispendioso.
+2. Complexidade: Pode aumentar a complexidade do código devido ao grande número de classes e interfaces envolvidas.
+3. Redundância de Código: Pode haver redundância se as famílias de produtos diferirem apenas ligeiramente.
+
+PERFORMANCE:
+
+O impacto do Abstract Factory na performance pode ser considerado em dois aspectos principais:
+
+1. Overhead de Tempo de Execução: Similar ao Factory Method, o overhead é pequeno e muitas vezes negligenciável.
+2. Custo de Memória: Como envolve mais classes e interfaces, o Abstract Factory pode ter um maior custo de memória, embora isso geralmente não seja significativo.
+
+QUANDO UTILIZAR:
+
+O Abstract Factory é ideal em situações como:
+
+1. Sistemas que Requerem Produtos Independentes: Quando um sistema precisa ser configurado com uma de várias famílias de produtos.
+2. Produtos que Precisam Ser Usados Juntos: Quando produtos que têm interações complexas são projetados para funcionar em conjunto.
+3. Encapsulamento da Lógica de Criação: Quando você quer encapsular a lógica de criação que envolve complexidade ou detalhes específicos da implementação de um conjunto de produtos.
+4. Flexibilidade de Configuração: Quando a configuração do sistema precisa permitir a troca entre diferentes famílias de produtos.
+
+DIFERENÇAS ENTRE FACTORY METHOD E ABSTRACT FACTORY:
+
+1. Propósito: O Factory Method é usado para criar um único tipo de objeto, enquanto o Abstract Factory é usado para criar famílias de objetos relacionados.
+2. Escopo: O Factory Method é focado em criar um único objeto, enquanto o Abstract Factory é focado em criar famílias de objetos.
+3. Flexibilidade: O Abstract Factory é mais flexível do que o Factory Method, pois permite a criação de famílias de objetos relacionados.
+4. Complexidade: O Abstract Factory é mais complexo do que o Factory Method, pois envolve a criação de várias classes e interfaces.
+5. Número de Métodos: O Factory Method tem um único método para criar objetos, enquanto o Abstract Factory tem vários métodos para criar famílias de objetos.
+6. Número de Classes: O Factory Method envolve menos classes do que o Abstract Factory, pois cria apenas um tipo de objeto.
+7. Número de Interfaces: O Abstract Factory envolve mais interfaces do que o Factory Method, pois cria famílias de objetos relacionados.
+
+Em resumo, enquanto o Factory Method foca em criar um objeto (por exemplo, uma cadeira), o Abstract foca em criar objetos relacionadios. 
+Pensando em um setor de vendas, é como se o Factory Method fosse aquela loja que vendesse mesas e cadeiras separadas, enquanto o Abstract Factory fosse aquela loja que 
+vendesse conjuntos de mesas e cadeiras combinando entre si.

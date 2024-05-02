@@ -36,6 +36,7 @@ VANTAGENS:
 5. Princípio de Substituição de Liskov: As classes derivadas podem ser substituídas por suas classes base sem afetar o funcionamento do sistema, o que é uma boa prática de programação orientada a objetos.
 
 DESVANTAGENS:
+
 1. Complexidade Adicional: Introduz mais classes e interfaces no sistema, o que pode complicar o design, especialmente em projetos onde tal flexibilidade não é necessária.
 2. Criação Indireta de Objetos: Como a criação de objetos é feita através de um método indireto, pode ser mais difícil compreender e depurar o código, particularmente para quem não está familiarizado com o padrão.
 3. Refatoração Necessária: Se o número de produtos ou variantes cresce significativamente, pode ser necessário refatorar o código para acomodar novas classes, o que pode ser trabalhoso.
