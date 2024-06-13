@@ -1,0 +1,57 @@
+﻿-----> Builder <------
+
+O padrão de projeto Builder é um padrão de criação que permite a construção de objetos complexos passo a passo. 
+Ele é especialmente útil quando a construção de um objeto envolve várias etapas ou quando o objeto pode ser construído de várias maneiras 
+diferentes. O Builder separa a construção de um objeto da sua representação, permitindo que o mesmo processo de construção possa criar 
+diferentes representações.
+
+Builder (Padrão de Objeto)
+O padrão Builder é um padrão de objeto porque foca na composição de objetos complexos e na construção passo a passo, em tempo de execução. 
+Diferentemente do Factory Method, que é um padrão de classe e utiliza herança para determinar a classe concreta a ser instanciada em tempo 
+de compilação, o Builder utiliza composição e permite maior flexibilidade e controle sobre a criação de objetos complexos.
+
+OBSERVAÇÃO: O padrão Builder é frequentemente usado em conjunto com o padrão Composite, que permite a construção de objetos complexos.
+
+CONSTRUTOR DO PADRÃO BUILDER:
+
+Embora seja uma boa prática evitar acoplamentos fortes em construtores, no padrão builder ele é essencial para que o usuário possa usar um objeto
+a partir apenas do Builder, sem necessitar criá-lo diretamente.
+
+FUNCIONAMENTO
+
+O Builder é implementado através de uma série de classes, cada uma responsável por um aspecto da construção do objeto. 
+Funciona da seguinte maneira:
+
+1. Classe Builder: Define uma interface para construir as partes de um objeto.
+2. Builder Concreto: Implementa a interface do Builder e constrói as partes específicas do objeto.
+3. Classe Produto: Representa o objeto complexo a ser construído.
+4. Classe Diretor (opcional): Direciona a construção de um objeto usando a interface do Builder.
+
+ESTRUTURA:
+
+1. Produto: A classe que representa o objeto final que está sendo construído.
+2. Builder: Uma interface ou classe abstrata que define os métodos para criar as partes do objeto Produto.
+3. Builder Concreto: Implementa os métodos do Builder para construir e montar as partes específicas do Produto.
+4. Diretor: (Opcional) Uma classe que utiliza o Builder para construir o objeto Produto. Ele fornece uma interface para construir o objeto em várias etapas.
+
+VANTAGENS:
+
+1. Separação de Preocupações: Separa a lógica de construção do objeto da sua representação.
+2. Flexibilidade: Permite a construção de objetos complexos passo a passo.
+3. Reusabilidade de Código: Pode reutilizar o mesmo código de construção para diferentes representações do objeto.
+4. Facilidade de Manutenção: Facilita a adição de novas representações do objeto sem alterar o código de construção existente.
+
+DESVANTAGENS:
+
+1. Complexidade: Pode adicionar complexidade ao código devido ao aumento do número de classes e métodos.
+2. Código Verboso: A construção de objetos complexos pode resultar em código verboso, especialmente se muitos passos são necessários.
+
+PERFORMANCE:
+
+O padrão Builder não afeta diretamente a performance do sistema, pois seu objetivo é separar a construção de um objeto de sua representação.
+
+QUANDO USAR:
+
+1. Construção de Objetos Complexos: Quando a construção de um objeto envolve várias etapas e a criação de diferentes representações do objeto é necessária.
+2. Reutilização de Código: Quando se deseja reutilizar o mesmo código de construção para diferentes representações do objeto.
+3. Separação de Preocupações: Quando se deseja separar a lógica de construção da representação do objeto.

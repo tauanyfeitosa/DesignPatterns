@@ -4,22 +4,11 @@ O padrão de projeto Abstract Factory é um padrão criacional que fornece uma i
 dependentes sem especificar suas classes concretas. Esse padrão ajuda a garantir que um sistema seja independente 
 de como seus produtos são criados, compostos e representados.
 
-FUNCIONAMENTO:
-
-O Abstract Factory é implementado através de interfaces e classes abstratas. Funciona da seguinte maneira:
-
-1. Interface de Fábrica Abstrata: Define uma interface para criar famílias de produtos relacionados.
-2. Fábricas Concretas: Implementam a interface da fábrica abstrata e criam produtos que são internamente coerentes.
-3. Interface de Produto: Define a interface dos produtos que as fábricas criarão.
-4. Produtos Concretos: São as implementações específicas dos produtos que são criados pelas fábricas concretas.
-
-
-Aqui está um resumo detalhado sobre o padrão de projeto Abstract Factory usando a mesma estrutura que você usou para o Factory Method:
-
------> Abstract Factory <------
-
-O padrão de projeto Abstract Factory é um padrão criacional que fornece uma interface para criar famílias de objetos relacionados ou dependentes 
-sem especificar suas classes concretas. Esse padrão ajuda a garantir que um sistema seja independente de como seus produtos são criados, compostos e representados.
+Abstract Factory (Padrão de Objeto)
+Foco na Composição de Objetos: O padrão Abstract Factory foca em criar famílias de objetos relacionados sem especificar suas classes concretas, 
+envolvendo um nível maior de abstração. A lógica de criação de objetos é encapsulada em fábricas que são responsáveis por criar esses objetos. Assim, a 
+composição de objetos se torna mais flexível e desacoplada das classes específicas que criam os objetos. Esse padrão permite a manipulação e interação de grupos 
+de objetos de maneira consistente, sem se preocupar com suas implementações específicas.
 
 FUNCIONAMENTO:
 
@@ -44,35 +33,6 @@ VANTAGENS:
 3. Facilidade de Troca de Família de Produtos: É fácil substituir uma família de produtos por outra como um grupo.
 4. Princípio de Segregação de Interface: Promove o uso de interfaces específicas para cada tipo de produto.
 5. Fomenta a Coesão: Reforça a coesão dentro de uma família de produtos.
-
-
-Aqui está um resumo detalhado sobre o padrão de projeto Abstract Factory usando a mesma estrutura que você usou para o Factory Method:
-
------> Abstract Factory <------
-
-O padrão de projeto Abstract Factory é um padrão criacional que fornece uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas. Esse padrão ajuda a garantir que um sistema seja independente de como seus produtos são criados, compostos e representados.
-
-FUNCIONAMENTO:
-
-O Abstract Factory é implementado através de interfaces e classes abstratas. Funciona da seguinte maneira:
-
-Interface de Fábrica Abstrata: Define uma interface para criar famílias de produtos relacionados.
-Fábricas Concretas: Implementam a interface da fábrica abstrata e criam produtos que são internamente coerentes.
-Interface de Produto: Define a interface dos produtos que as fábricas criarão.
-Produtos Concretos: São as implementações específicas dos produtos que são criados pelas fábricas concretas.
-USO DE CLASSES ABSTRATAS OU INTERFACES:
-
-O Abstract Factory pode utilizar tanto classes abstratas quanto interfaces, dependendo da necessidade de compartilhar código ou apenas especificar um contrato:
-
-Classes Abstratas: Utilizadas para compartilhar código que implementa a interface da fábrica, facilitando a criação de famílias de produtos que têm implementações semelhantes.
-Interfaces: Usadas para definir um contrato que todas as fábricas concretas devem seguir, permitindo que diferentes fábricas implementem a criação de produtos de maneiras distintas.
-VANTAGENS:
-
-Consistência entre Produtos: Garante que produtos de uma mesma família sejam usados juntos, o que é importante para a compatibilidade.
-Isolamento das Classes Concretas: O cliente não precisa conhecer as classes que implementam produtos; ele apenas trabalha com produtos através de suas interfaces.
-Facilidade de Troca de Família de Produtos: É fácil substituir uma família de produtos por outra como um grupo.
-Princípio de Segregação de Interface: Promove o uso de interfaces específicas para cada tipo de produto.
-Fomenta a Coesão: Reforça a coesão dentro de uma família de produtos.
 
 DESVANTAGENS:
 

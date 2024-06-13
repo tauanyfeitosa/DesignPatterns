@@ -5,6 +5,12 @@ O padrão de projeto Factory Method é um padrão criacional que define uma inte
 ]mas deixa que as classes derivadas decidam qual classe instanciar. Esse padrão permite que uma classe adie 
 a instanciação para subclasses, promovendo o desacoplamento entre o criador e as classes concretas.
 
+Factory Method (Padrão de Classe)
+Foco na Estrutura das Classes: O padrão Factory Method lida principalmente com a estrutura das classes, utilizando a herança para permitir que subclasses 
+decidam como instanciar um objeto. A criação do objeto é abstraída em uma interface ou uma classe abstrata, e a instância concreta é deixada para as subclasses 
+que herdam desta interface ou classe abstrata. Isso significa que a criação do objeto é fortemente ligada à hierarquia de classe, enfatizando a modificação e 
+extensão da estrutura das classes através de herança.
+
 FUNCIONAMENTO:
 
 O Factory Method é geralmente implementado usando uma interface ou uma classe abstrata. Em um nível alto, 
